@@ -25,6 +25,20 @@
         <h3 class="overlay-text">美丽的图片</h3>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+      containers = document.getElementsByClassName('image-container')
+      for (let index = 0; index < containers.length; index++) {
+          const element = containers[index];
+          element.addEventListener('click', ()=>{
+            for (let index = 0; index < containers.length; index++) {
+              const elementOther = containers[index];
+              if(elementOther!=element){
+                elementOther.classList.remove("container-activate")
+              }
+            }
+              element.classList.add("container-activate")
+          })
+      }
+    </script>
   </body>
 </html>

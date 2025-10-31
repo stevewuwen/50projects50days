@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.image-container {
+  position: relative;
+  width: fit-content;
+  height: 100%;
+  cursor: pointer;
+  transition: flex-grow 0.5s ease-in-out, width 0.5s ease-in-out;
+  flex-shrink: 0; 
+  width: 5%; /* 非激活状态的初始宽度，可以根据需要调整 */
+  object-fit: cover
+}
+
+.image {
+  border-radius: 50px;
+  width: 100%; /* 宽度填满父级 .image-item */
+  height: 100%; /* 高度填满父级 .image-item */
+  /* ！！！确保这两行是关键！！！ */
+  object-fit: cover; 
+  object-position: 50% 50%; /* 确保图片内容在容器内水平和垂直居中 */
+  
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: -1%;
+  left: 3%;
+  display: none;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1vw;
+  height: 100%;
+}
+
+.container-activate {
+  width: 70vw;
+}
+
+.container-activate .overlay-text{
+  display:block;
+}
