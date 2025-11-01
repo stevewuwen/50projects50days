@@ -32,7 +32,7 @@ body {
   position: relative;
   -webkit-transition: all 700ms ease-in;
 }
-
+flex是什么，如何实现动画的
 .panel h3 {
   font-size: 24px;
   position: absolute;
